@@ -11,19 +11,18 @@ import android.widget.Toast;
 import android.app.AlertDialog;
 
 public class ResetPass extends AppCompatActivity {
-    EditText newPasswordEditText = findViewById(R.id.newPasswordEditText);
-    EditText confirmPasswordEditText = findViewById(R.id.confirmPasswordEditText);
-    Button resetPasswordButton = findViewById(R.id.resetPasswordButton);
+    EditText newPasswordEditText ;
+    EditText confirmPasswordEditText ;
+    Button resetPasswordButton ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reset_pass);
+        newPasswordEditText = findViewById(R.id.newPasswordEditText);
+        confirmPasswordEditText = findViewById(R.id.confirmPasswordEditText);
+        resetPasswordButton = findViewById(R.id.resetPasswordButton);
 
-        // Find views by ID
-
-
-        // Set up click listener for the Reset Password button
     }
     public void confirmPass(View view) {
         // Get the entered passwords
@@ -34,6 +33,7 @@ public class ResetPass extends AppCompatActivity {
         if (newPassword.equals(confirmPassword)) {
             Intent i = new Intent(ResetPass.this, MainActivity.class);
             showToast("Password reset successful!");
+            startActivity(i);
         } else {
             // Passwords do not match, show an error popup
             showErrorMessagePopup("Passwords do not match. Please enter the same password.");

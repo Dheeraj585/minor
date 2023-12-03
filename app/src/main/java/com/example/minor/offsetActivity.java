@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class offsetActivity extends AppCompatActivity {
@@ -23,14 +22,14 @@ public class offsetActivity extends AppCompatActivity {
         String distanceTraveled = getIntent().getStringExtra("distanceTraveled");
 
         // Set the distance in the OffsetActivity
-        EditText distanceTraveledValueTextView = findViewById(R.id.distanceEditText);
+        TextView distanceTraveledValueTextView = findViewById(R.id.distanceTextView);
         distanceTraveledValueTextView.setText(distanceTraveled);
     }
         public void to_bar(View v){
-            EditText ed = findViewById(R.id.carbonFootprintEditText);
+            TextView ed = findViewById(R.id.carbonFootprintTextView);
             String carbon = ed.getText().toString();
             int carbonInt = Integer.parseInt(carbon);
-            Intent intent = new Intent(offsetActivity.this, com.example.minor.pbar.class);
+            Intent intent = new Intent(offsetActivity.this, bar.class);
 
             intent.putExtra("carbon",carbonInt);
             startActivity(intent);

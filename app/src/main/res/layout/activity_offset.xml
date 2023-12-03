@@ -7,7 +7,7 @@
         android:id="@+id/backgroundImage"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/appbg"
+        android:background="@drawable/bg"
         android:scaleType="centerCrop"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -23,13 +23,11 @@
         android:textSize="18sp"
         android:layout_marginTop="16dp"
         android:textColor="#ffffff"
-
         android:layout_centerHorizontal="true"/>
 
     <!-- Distance -->
     <TextView
         android:textColor="#ffffff"
-
         android:id="@+id/distanceLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -38,70 +36,62 @@
         android:layout_below="@id/titleTextView"
         android:layout_marginTop="16dp"/>
 
-    <EditText
+    <TextView
         android:textColor="#ffffff"
-
-        android:id="@+id/distanceEditText"
+        android:id="@+id/distanceTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
         android:layout_below="@id/distanceLabel"
         android:layout_marginTop="8dp"/>
 
     <!-- Carbon Footprint -->
     <TextView
         android:textColor="#ffffff"
-
         android:id="@+id/carbonFootprintLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Carbon Footprint"
         android:textSize="16sp"
-        android:layout_below="@id/distanceEditText"
+        android:layout_below="@id/distanceTextView"
         android:layout_marginTop="16dp"/>
 
-    <EditText
+    <TextView
         android:textColor="#ffffff"
-
-        android:id="@+id/carbonFootprintEditText"
+        android:id="@+id/carbonFootprintTextView"
+        android:text="900"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
         android:layout_below="@id/carbonFootprintLabel"
         android:layout_marginTop="8dp"/>
 
     <!-- Emission Rate -->
     <TextView
         android:textColor="#ffffff"
-
         android:id="@+id/emissionRateLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Emission Rate"
         android:textSize="16sp"
-        android:layout_below="@id/carbonFootprintEditText"
+        android:layout_below="@id/carbonFootprintTextView"
         android:layout_marginTop="16dp"/>
 
-    <EditText
+    <TextView
         android:textColor="#ffffff"
-
-        android:id="@+id/emissionRateEditText"
+        android:id="@+id/emissionRateTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
         android:layout_below="@id/emissionRateLabel"
         android:layout_marginTop="8dp"/>
 
     <!-- Offset Information -->
     <TextView
         android:textColor="#ffffff"
-
         android:id="@+id/offsetInfoTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="The above emission rate will be added to your dashboard."
         android:textSize="14sp"
-        android:layout_below="@id/emissionRateEditText"
+        android:layout_below="@id/emissionRateTextView"
         android:layout_marginTop="16dp"/>
 
     <!-- Offset Button -->

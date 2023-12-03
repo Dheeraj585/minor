@@ -42,11 +42,12 @@ public class MainActivity extends AppCompatActivity {
                 String password = passwordDots.getText().toString();
                 // Validate the email and password
                 if (isValidCredentials(email, password)) {
-                    startActivity(new Intent(MainActivity.this, distance_Activity.class));
+                    startActivity(new Intent(MainActivity.this, modeOfTransport.class));
                     finish();
                 }
             }
         });
+
 
 
 
@@ -66,9 +67,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Navigate to the sign-up screen or perform sign-up logic
-                startActivity(new Intent(MainActivity.this, SignupActivity.class));
+                startActivity(new Intent(MainActivity.this, SignUpActivity.class));
             }
         });
+    }
+
+    public void signUp(View v){
+        Intent io = new Intent(MainActivity.this,SignUpActivity.class);
+        startActivity(io);
+
     }
     public void resetPass(View v){
         Intent io = new Intent(MainActivity.this,ResetPass.class);
